@@ -1,6 +1,11 @@
 body{
     background-image: linear-gradient(rgb(182, 233, 237), rgb(211, 207, 162));
     background-size: cover;
+    height: 100vh;
+}
+
+nav{
+    text-align: center;
 }
 
 .container{
@@ -26,11 +31,13 @@ body{
 .left{
     float: left;
     clear: both;
+    overflow-wrap: break-word;
 }
 
 .right{
     float: right;
     clear: both;
+    overflow-wrap: break-word;
 }
 
 #send-container{
@@ -52,4 +59,12 @@ body{
     border: 2px solid black;
     border-radius: 6px;
     height: 34px;
+}
+
+footer{
+    text-align: center;
+}
+
+footer p a{
+    text-decoration: none;
 }
