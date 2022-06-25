@@ -21,6 +21,7 @@ const appendMsg = (message, position) => {
     if(position === 'left') {
         audio.play(); //we don't want to play audio on our side(only other users side)
     };
+    scrollContainerTillEnd();
 };
 
 form.addEventListener('submit', e => {
@@ -42,3 +43,10 @@ socket.on('receive', data => {
 socket.on('left', name => {
     appendMsg(`${name} left the chat`, 'left');
 });
+
+function scrollContainerTillEnd() {
+//     // always scroll the div till the end
+    var elem = document.getElementsByClassName("container")[0];
+    elem.scrollTop = elem.scrollHeight;
+}
+
